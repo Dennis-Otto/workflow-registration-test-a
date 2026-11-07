@@ -1,0 +1,10 @@
+name: On push
+on:
+  push:
+    branches: [main]
+permissions: {}
+jobs:
+  hello:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo hello

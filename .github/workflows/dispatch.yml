@@ -1,0 +1,11 @@
+name: Only manual and schedule
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 1 1 *"
+permissions: {}
+jobs:
+  hello:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo hello
