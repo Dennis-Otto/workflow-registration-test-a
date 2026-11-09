@@ -1,0 +1,13 @@
+name: Probe A
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions: {}
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "A ran on $GITHUB_EVENT_NAME"

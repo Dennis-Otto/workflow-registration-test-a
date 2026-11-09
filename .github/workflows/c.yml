@@ -1,0 +1,14 @@
+name: Probe C
+on:
+  pull_request_target:
+    types: [opened, synchronize, closed]
+permissions: {}
+jobs:
+  lifecycle:
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: read
+    uses: Dennis-Otto/issue-assistant/.github/workflows/reusable-issue-lifecycle.yml@ed74e12357c89d40370f6422dedb34369db4f70b # v1.10.4
+    with:
+      dry_run: true

@@ -1,0 +1,9 @@
+name: Probe D
+on:
+  pull_request_target:
+permissions: {}
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "D ran on $GITHUB_EVENT_NAME"
